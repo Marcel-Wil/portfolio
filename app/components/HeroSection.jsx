@@ -6,9 +6,9 @@ import { TypeAnimation } from "react-type-animation";
 const HeroSection = () => {
   return (
     <section>
-      <div className="grid grid-cols-1 lg:gtid-cols-12">
+      <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
               Hello, I&apos;m{" "}
             </span>
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+        <div className="col-span-5 rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
           <Image
             src="/Marcel-Anime.png"
             alt="Hero image"
