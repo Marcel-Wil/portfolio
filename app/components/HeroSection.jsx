@@ -17,11 +17,13 @@ const HeroSection = () => {
               sequence={[
                 "Marceli",
                 1000,
-                "Fullstack Developer",
-                1000,
                 "Software Developer",
                 1000,
+                "Fullstack Developer",
+                1000,
                 "Backend Developer",
+                1000,
+                "Software Engineer",
                 1000,
               ]}
               wrapper="span"
@@ -48,7 +50,7 @@ const HeroSection = () => {
           <Image
             src="/Marcel-Anime.png"
             alt="Hero image"
-            width={400}
+            width={315}
             height={400}
             className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
           />
