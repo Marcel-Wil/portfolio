@@ -4,3 +4,7 @@ export { default as NavLink } from "./NavLink";
 export { default as MenuOverlay } from "./MenuOverlay";
 export { default as AboutSection } from "./AboutSection";
 export { default as TabButton } from "./TabButton";
+export { default as ProjectSection } from "./ProjectSection";
+export { default as ProjectCard } from "./ProjectCard";
+export { default as ProjectTag } from "./ProjectTag";
+export { default as EmailSection } from "./EmailSection";
