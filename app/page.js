@@ -4,6 +4,7 @@ import {
   AboutSection,
   ProjectSection,
   EmailSection,
+  Footer,
 } from "./components/Imports";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <ProjectSection />
         <EmailSection />
       </div>
+      <Footer />
     </main>
   );
 }

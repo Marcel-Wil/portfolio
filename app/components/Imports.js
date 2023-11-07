@@ -8,3 +8,4 @@ export { default as ProjectSection } from "./ProjectSection";
 export { default as ProjectCard } from "./ProjectCard";
 export { default as ProjectTag } from "./ProjectTag";
 export { default as EmailSection } from "./EmailSection";
+export { default as Footer } from "./Footer";
