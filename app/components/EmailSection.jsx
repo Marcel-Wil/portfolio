@@ -1,8 +1,76 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 const EmailSection = () => {
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  useEffect(() => {
+    const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+    if (lastSubmissionTime !== null) {
+      const bool = checkIf24HoursPassed();
+      console.log(bool);
+    }
+  }, []);
+
+  const checkIf24HoursPassed = () => {
+    const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+    if (lastSubmissionTime === null) return true; //if no submission has been made yet, allow submission
+    // Get the current time
+    const currentTime = new Date().getTime();
+    // Check if 24 hours have passed since the last submission
+    if (
+      lastSubmissionTime &&
+      currentTime - lastSubmissionTime < 24 * 60 * 60 * 1000
+    ) {
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Get the last submission time from localStorage
+    const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+
+    // Get the current time
+    const currentTime = new Date().getTime();
+
+    // Check if 24 hours have passed since the last submission
+    if (
+      lastSubmissionTime &&
+      currentTime - lastSubmissionTime < 24 * 60 * 60 * 1000
+    ) {
+      alert("You can only send mail once a day.");
+      return;
+    }
+
+    const data = {
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+    const JSONdata = JSON.stringify(data);
+    const endpoint = "/api";
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSONdata,
+    };
+
+    const response = await fetch(endpoint, options);
+
+    if (response.status === 200) {
+      // Store the current time in localStorage
+      localStorage.setItem("lastSubmissionTime", currentTime.toString());
+      setEmailSubmitted(true);
+    }
+  };
+
   return (
     <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4">
       <div>
@@ -22,7 +90,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        <form className="flex flex-col">
+        <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -37,6 +105,7 @@ const EmailSection = () => {
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="jacob@google.com"
+              autoComplete="off"
             />
           </div>
           <div className="mb-6">
@@ -53,6 +122,7 @@ const EmailSection = () => {
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Just saying hi"
+              autoComplete="off"
             />
           </div>
           <div className="mb-6">
@@ -69,12 +139,29 @@ const EmailSection = () => {
               placeholder="Let's talk about..."
             />
           </div>
-          <button
-            type="submit"
-            className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-black font-medium py-2.5 px-5 rounded-full w-full"
-          >
-            Send Message
-          </button>
+          {checkIf24HoursPassed() ? (
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-black font-medium py-2.5 px-5 rounded-full w-full"
+            >
+              Send Message
+            </button>
+          ) : (
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-red-500 to-red-600  text-black font-medium py-2.5 px-5 rounded-full w-full"
+              disabled
+            >
+              You already sent a message today, if u still wish to contact me
+              again contact me via Email/LinkedIn {":)"}.
+            </button>
+          )}
+
+          {!checkIf24HoursPassed() && (
+            <p className="text-green-500 text-sm mt-2">
+              Email sent succesfully!
+            </p>
+          )}
         </form>
       </div>
     </section>
