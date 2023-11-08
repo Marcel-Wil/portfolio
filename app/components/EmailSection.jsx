@@ -15,16 +15,18 @@ const EmailSection = () => {
   }, []);
 
   const checkIf24HoursPassed = () => {
-    const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
-    if (lastSubmissionTime === null) return true; //if no submission has been made yet, allow submission
-    // Get the current time
-    const currentTime = new Date().getTime();
-    // Check if 24 hours have passed since the last submission
-    if (
-      lastSubmissionTime &&
-      currentTime - lastSubmissionTime < 24 * 60 * 60 * 1000
-    ) {
-      return false;
+    if (typeof window !== "undefined") {
+      const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+      if (lastSubmissionTime === null) return true; //if no submission has been made yet, allow submission
+      // Get the current time
+      const currentTime = new Date().getTime();
+      // Check if 24 hours have passed since the last submission
+      if (
+        lastSubmissionTime &&
+        currentTime - lastSubmissionTime < 24 * 60 * 60 * 1000
+      ) {
+        return false;
+      }
     }
   };
 
