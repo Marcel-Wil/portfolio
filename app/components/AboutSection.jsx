@@ -65,7 +65,7 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a software engineer with 4 years of programming experience and
             I have a passion for creating interactive and responsive web
-            applications. I'm currently looking for intresting projects to work
+            applications. I am currently looking for intresting projects to work
             on to expand my knowledge and skills.
           </p>
           <div className="flex flex-row justify-start mt-8">

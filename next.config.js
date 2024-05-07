@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  output: "export", // <=== enables static exports
+  basePath: "/portfolio",
+  reactStrictMode: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
