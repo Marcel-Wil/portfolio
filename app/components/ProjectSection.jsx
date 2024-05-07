@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: "Twitter Clone",
     description: "Popular social media platform clone",
-    image: "/images/projects/twitter.png",
+    image: "/portfolio/images/projects/twitter.png",
     tag: ["Fullstack"],
     gitUrl: "https://github.com/Marcel-aka-Satum/twitter-clone",
     previewUrl: "/",
