@@ -102,7 +102,7 @@ const projectsData = [
 ];
 
 const ProjectSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Fullstack");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
