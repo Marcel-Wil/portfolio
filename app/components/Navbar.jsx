@@ -17,7 +17,7 @@ const Navbar = () => {
     <navbar className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
         <Link href="/" className="text-5xl text-white font-semibold">
-          LOGO
+          Marceli
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

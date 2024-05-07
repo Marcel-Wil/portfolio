@@ -1,17 +1,13 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [is24HoursPassed, setIs24HoursPassed] = useState(true); //state to check if 24 hours have passed since last submission
+
   useEffect(() => {
-    const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
-    if (lastSubmissionTime !== null) {
-      const bool = checkIf24HoursPassed();
-      console.log(bool);
-    }
+    setIs24HoursPassed(checkIf24HoursPassed());
   }, []);
 
   const checkIf24HoursPassed = () => {
@@ -39,13 +35,15 @@ const EmailSection = () => {
     // Get the current time
     const currentTime = new Date().getTime();
 
-    // Check if 24 hours have passed since the last submission
-    if (
-      lastSubmissionTime &&
-      currentTime - lastSubmissionTime < 24 * 60 * 60 * 1000
-    ) {
-      alert("You can only send mail once a day.");
-      return;
+    if (lastSubmissionTime !== null) {
+      // Check if 24 hours have passed since the last submission
+      if (
+        lastSubmissionTime &&
+        currentTime - lastSubmissionTime < 24 * 60 * 60 * 1000
+      ) {
+        alert("You can only send mail once a day.");
+        return;
+      }
     }
 
     const data = {
@@ -69,12 +67,15 @@ const EmailSection = () => {
     if (response.status === 200) {
       // Store the current time in localStorage
       localStorage.setItem("lastSubmissionTime", currentTime.toString());
-      setEmailSubmitted(true);
+      setIs24HoursPassed(false);
     }
   };
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4">
+    <section
+      id="contact"
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
+    >
       <div>
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
@@ -83,10 +84,10 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/Marcel-aka-Satum">
             <FaGithub className="text-3xl text-[#ADB7BE] hover:text-white cursor-pointer" />
           </Link>
-          <Link href="LinkedIn.com">
+          <Link href="https://www.linkedin.com/in/marceli-wilczynski-1360b2259/">
             <FaLinkedin className="text-3xl text-[#ADB7BE] hover:text-white cursor-pointer" />
           </Link>
         </div>
@@ -141,10 +142,11 @@ const EmailSection = () => {
               placeholder="Let's talk about..."
             />
           </div>
-          {checkIf24HoursPassed() ? (
+          {is24HoursPassed ? (
             <button
               type="submit"
               className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-black font-medium py-2.5 px-5 rounded-full w-full"
+              disabled
             >
               Send Message
             </button>
@@ -154,12 +156,12 @@ const EmailSection = () => {
               className="bg-gradient-to-r from-red-500 to-red-600  text-black font-medium py-2.5 px-5 rounded-full w-full"
               disabled
             >
-              You already sent a message today, if u still wish to contact me
-              again contact me via Email/LinkedIn {":)"}.
+              You already sent a message today, if u want a direct response
+              please contact me through my personal LinkedIn/e-mail{" :)"}.
             </button>
           )}
 
-          {!checkIf24HoursPassed() && (
+          {!is24HoursPassed && (
             <p className="text-green-500 text-sm mt-2">
               Email sent succesfully!
             </p>

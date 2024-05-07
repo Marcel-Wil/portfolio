@@ -9,20 +9,23 @@ const TAB_CONTENT = [
     id: "Skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>a</li>
-        <li>b</li>
-        <li>c</li>
-        <li>d</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "Education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>a1</li>
-        <li>b2</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>HTML/CSS</li>
+        <li>REACT/NEXT</li>
+        <li>SQL/POSTGRESQL</li>
+        <li>git/github</li>
+        <li>OOP</li>
+        <li>XML</li>
+        <li>TDD/BDD</li>
+        <li>SCRUM/Agile</li>
+        <li>REST API</li>
+        <li>GRAPHQL</li>
+        <li>Data Structures and Algorithms</li>
+        <li>docker</li>
+        <li>kubernetes</li>
+        <li>cloud</li>
       </ul>
     ),
   },
@@ -31,9 +34,8 @@ const TAB_CONTENT = [
     id: "Experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>exp1</li>
-        <li>exp2</li>
-        <li>exp3</li>
+        <li>4 years of Python && C++ experience (school and own projects)</li>
+        <li>3 years of JS experience (school and own projects)</li>
       </ul>
     ),
   },
@@ -61,12 +63,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            I am a software engineer with 4 years of programming experience and
+            I have a passion for creating interactive and responsive web
+            applications. I'm currently looking for intresting projects to work
+            on to expand my knowledge and skills.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -75,14 +75,6 @@ const AboutSection = () => {
             >
               <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE]">
                 Skills
-              </span>
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("Education")}
-              active={tab === "Education"}
-            >
-              <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE]">
-                Education
               </span>
             </TabButton>
             <TabButton
