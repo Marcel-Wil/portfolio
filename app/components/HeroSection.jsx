@@ -45,7 +45,7 @@ const HeroSection = () => {
 
         <div className="col-span-5 rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
           <Image
-            src="/images/Marcel-Anime.png"
+            src="/portfolio/images/Marcel-Anime.png"
             alt="Hero image"
             width={315}
             height={400}
