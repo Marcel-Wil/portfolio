@@ -24,7 +24,6 @@ const TAB_CONTENT = [
         <li>GRAPHQL</li>
         <li>Data Structures and Algorithms</li>
         <li>docker</li>
-        <li>kubernetes</li>
         <li>cloud</li>
       </ul>
     ),
@@ -34,8 +33,9 @@ const TAB_CONTENT = [
     id: "Experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>4 years of Python && C++ experience (school and own projects)</li>
-        <li>3 years of JS experience (school and own projects)</li>
+        <li>4+ Years of experience in Python</li>
+        <li>3+ Years of experience in JavaSript</li>
+        <li>4+ Years of experience in C++</li>
       </ul>
     ),
   },
