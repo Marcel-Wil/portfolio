@@ -24,7 +24,8 @@ const TAB_CONTENT = [
         <li>GRAPHQL</li>
         <li>Data Structures and Algorithms</li>
         <li>docker</li>
-        <li>cloud</li>
+        <li>cloud(Digitalocean, GCP)</li>
+        <li>PHP</li>
       </ul>
     ),
   },
@@ -36,6 +37,7 @@ const TAB_CONTENT = [
         <li>4+ Years of experience in Python</li>
         <li>3+ Years of experience in JavaSript</li>
         <li>4+ Years of experience in C++</li>
+        <li>6 Months of PHP, Laravel </li>
       </ul>
     ),
   },

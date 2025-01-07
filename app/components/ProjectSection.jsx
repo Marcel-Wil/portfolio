@@ -6,48 +6,50 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Twitter Clone",
-    description: "Popular social media platform clone",
-    image: "/portfolio/images/projects/twitter.png",
+    title: "HijabisAtWork",
+    description: "Job search platform for people with Hijabis",
+    image: "/portfolio/images/projects/hijabis.png",
     tag: ["Fullstack"],
-    gitUrl: "https://github.com/Marcel-aka-Satum/twitter-clone",
-    previewUrl: "/",
+    gitUrl: "/",
+    previewUrl: "https://hijabisatwork.com/en",
   },
   {
     id: 2,
+    title: "Craftails",
+    description:
+      "Craftails is a premium ready-to-serve cocktail and mocktail company based in Belgium",
+    image: "/portfolio/images/projects/craftailsimg.jpg",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://www.craftails.be/",
+  },
+  {
+    id: 3,
+    title: "Hngry",
+    description:
+      "Craftails is a premium ready-to-serve cocktail and mocktail company based in Belgium",
+    image: "/portfolio/images/projects/hngry.png",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://hngry.be/",
+  },
+  {
+    id: 4,
+    title: "PecheClinic",
+    description: "Skin Care clinic in Belgium",
+    image: "/portfolio/images/projects/skincare.webp",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://pecheclinic.com/",
+  },
+  {
+    id: 5,
     title: "News Aggregator App",
     description:
       " News aggregator app that collects and displays news from various sources, similar to Google News, Digg or The Factual. University project for the course of Programming Project Databases.",
     image: "/portfolio/images/projects/image.webp",
     tag: ["Fullstack"],
     gitUrl: "https://github.com/Marcel-aka-Satum/ProgrammingProjectDatabases",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description: "The website u are looking at :)",
-    image: "/portfolio/images/projects/frontend1.png",
-    tag: ["Frontend"],
-    gitUrl: "https://github.com/Marcel-aka-Satum/portfolio",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Carhub",
-    description: "Search up cars and get the latest news about them",
-    image: "/portfolio/images/projects/frontend2.png",
-    tag: ["Frontend"],
-    gitUrl: "https://github.com/Marcel-aka-Satum/CarHub",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "E-commerce Website",
-    description: "E-commerce website for selling products online",
-    image: "/portfolio/images/projects/frontend3.png",
-    tag: ["Frontend"],
-    gitUrl: "https://github.com/Marcel-aka-Satum/E-commerce",
     previewUrl: "/",
   },
   {
@@ -61,7 +63,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Chess Game",
     description: "Chess game made in C++ for course Programming at univeristy.",
     image: "/portfolio/images/projects/other2.png",
@@ -70,7 +72,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 6,
+    id: 8,
     title: "Meatboy Game",
     description:
       "Meatboy game made in C++ for course Advanced Programming at univeristy.",
@@ -80,7 +82,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 6,
+    id: 9,
     title: "Traffic simulation",
     description:
       "CLI Traffic simulation made in C++98 for course Software Engineering at univeristy.",
@@ -90,7 +92,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 7,
+    id: 10,
     title: "Pattern-Searching",
     description:
       "Pattern-Searching using qt-gui made in C++ for course Talen Automaten at univeristy.",
@@ -124,15 +126,10 @@ const ProjectSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-white flex flex-row justify-center items-center gap-6 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="Fullstack"
-          isSelected={tag === "Fullstack"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Frontend"
           isSelected={tag === "Fullstack"}
         />
         <ProjectTag
