@@ -26,6 +26,7 @@ const TAB_CONTENT = [
         <li>docker</li>
         <li>cloud(Digitalocean, GCP)</li>
         <li>PHP</li>
+        and more... (the list is already too long)
       </ul>
     ),
   },
