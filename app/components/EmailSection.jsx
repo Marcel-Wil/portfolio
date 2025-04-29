@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { MdOutlineMail } from "react-icons/md";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
@@ -92,84 +94,12 @@ const EmailSection = () => {
           <Link href="https://www.linkedin.com/in/marceli-wilczynski-1360b2259/">
             <FaLinkedin className="text-3xl text-[#ADB7BE] hover:text-white cursor-pointer" />
           </Link>
+          <a href="mailto:wilczynskimarceli@gmail.com">
+            <MdOutlineMail className="text-3xl text-[#ADB7BE] hover:text-white cursor-pointer" />
+          </a>
         </div>
       </div>
-      <div>
-        <form className="flex flex-col" onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label
-              htmlFor="email"
-              className="text-white block mb-2 text-sm font-medium"
-            >
-              Your email
-            </label>
-            <input
-              name="email"
-              type="email"
-              id="email"
-              required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="jacob@google.com"
-              autoComplete="off"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="subject"
-              className="text-white block text-sm mb-2 font-medium"
-            >
-              Subject
-            </label>
-            <input
-              name="subject"
-              type="text"
-              id="subject"
-              required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Just saying hi"
-              autoComplete="off"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="message"
-              className="text-white block text-sm mb-2 font-medium"
-            >
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Let's talk about..."
-            />
-          </div>
-          {is24HoursPassed ? (
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-black font-medium py-2.5 px-5 rounded-full w-full"
-              disabled
-            >
-              Send Message
-            </button>
-          ) : (
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-red-500 to-red-600  text-black font-medium py-2.5 px-5 rounded-full w-full"
-              disabled
-            >
-              You already sent a message today, if u want a direct response
-              please contact me through my personal LinkedIn/e-mail{" :)"}.
-            </button>
-          )}
-
-          {!is24HoursPassed && (
-            <p className="text-green-500 text-sm mt-2">
-              Email sent succesfully!
-            </p>
-          )}
-        </form>
-      </div>
+      <div></div>
     </section>
   );
 };

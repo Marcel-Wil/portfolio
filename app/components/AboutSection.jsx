@@ -29,18 +29,6 @@ const TAB_CONTENT = [
       </ul>
     ),
   },
-  {
-    title: "Experience",
-    id: "Experience",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>4+ Years of experience in Python</li>
-        <li>3+ Years of experience in JavaSript</li>
-        <li>4+ Years of experience in C++</li>
-        <li>6 Months of PHP, Laravel </li>
-      </ul>
-    ),
-  },
 ];
 
 const AboutSection = () => {
@@ -65,7 +53,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a software engineer with 4 years of programming experience and
+            I am a software engineer with 5 years of programming experience and
             I have a passion for creating interactive and responsive web
             applications. I am currently looking for intresting projects to work
             on to expand my knowledge and skills.
@@ -79,14 +67,14 @@ const AboutSection = () => {
                 Skills
               </span>
             </TabButton>
-            <TabButton
+            {/* <TabButton
               selectTab={() => handleTabChange("Experience")}
               active={tab === "Experience"}
             >
               <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE]">
                 Experience
               </span>
-            </TabButton>
+            </TabButton> */}
           </div>
           <div className="mt-8">
             {TAB_CONTENT.find((t) => t.id === tab).content}

@@ -35,9 +35,9 @@ const HeroSection = () => {
             Welcome to my programming portfolio.
           </p>
           <div>
-            <a href="https://www.linkedin.com/in/marceli-wilczynski-1360b2259/">
+            <a href="mailto:wilczynskimarceli@gmail.com">
               <button className="px-6 py-3 rounded-full sm:w-fit mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500  hover:bg-slate-200 text-white">
-                Hire me
+                Contact me
               </button>
             </a>
           </div>
