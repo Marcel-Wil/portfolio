@@ -133,6 +133,35 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "https://bokertov.be/nl",
   },
+  {
+    id: 14,
+    title: "MYwastudio",
+    description:
+      "Mywastudio is a dynamic company specializing in building innovative websites and web applications.",
+    image: "/portfolio/images/projects/mywastudio.jpg",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://mywastudio.be/",
+  },
+  {
+    id: 15,
+    title: "Architects Antwerpen",
+    description: "Architectural highlights and design inspirations in Antwerp.",
+    image: "/portfolio/images/projects/architect.jpg",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://architectsantwerpen.mywastudio.be/",
+  },
+  {
+    id: 16,
+    title: "MAmodels",
+    description:
+      "Discover the elegance and talent of Antwerp's top models with MAmodels — a premier platform showcasing a curated selection of professional and aspiring models based in the fashion-forward city of Antwerp. From editorial shoots to runway talent, explore detailed profiles, portfolios, and booking opportunities all in one place.",
+    image: "/portfolio/images/projects/models.jpg",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://modelsantwerpen.mywastudio.be/",
+  },
 ];
 
 const ProjectSection = () => {

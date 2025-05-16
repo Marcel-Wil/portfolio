@@ -88,7 +88,7 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/Marcel-aka-Satum">
+          <Link href="https://github.com/Marcel-Wil">
             <FaGithub className="text-3xl text-[#ADB7BE] hover:text-white cursor-pointer" />
           </Link>
           <Link href="https://www.linkedin.com/in/marceli-wilczynski-1360b2259/">
