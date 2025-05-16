@@ -27,9 +27,9 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a software engineer with 5 years of programming experience,
             passionate about creating interactive and responsive web
-            applications. (Though I prefer backend development - I'm more of a
-            data person). In my personal time, I enjoy playing volleyball and
-            basketball, going on hikes, and playing video games.
+            applications. (Though I prefer backend development - I&apos;m more
+            of a data person). In my personal time, I enjoy playing volleyball
+            and basketball, going on hikes, and playing video games.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
