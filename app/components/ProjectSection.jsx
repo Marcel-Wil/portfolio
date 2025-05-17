@@ -162,6 +162,16 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "https://modelsantwerpen.mywastudio.be/",
   },
+  {
+    id: 16,
+    title: "L’Élément Anvers",
+    description:
+      "Innovative chemical research and industrial solutions based in Antwerp, Belgium. Specializing in sustainable chemistry, polymers, and material science.",
+    image: "/portfolio/images/projects/lelements.jpg",
+    tag: ["Fullstack"],
+    gitUrl: "/",
+    previewUrl: "https://lelementsanvers.mywastudio.be/",
+  },
 ];
 
 const ProjectSection = () => {
